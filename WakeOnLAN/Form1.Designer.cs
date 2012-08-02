@@ -62,6 +62,7 @@
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add to List";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnNewHostWakeup
             // 
@@ -72,6 +73,7 @@
             this.btnNewHostWakeup.TabIndex = 2;
             this.btnNewHostWakeup.Text = "Wake up!";
             this.btnNewHostWakeup.UseVisualStyleBackColor = true;
+            this.btnNewHostWakeup.Click += new System.EventHandler(this.btnNewHostWakeup_Click);
             // 
             // label1
             // 
@@ -104,6 +106,7 @@
             this.txtMacAddress.Name = "txtMacAddress";
             this.txtMacAddress.Size = new System.Drawing.Size(169, 28);
             this.txtMacAddress.TabIndex = 0;
+            this.txtMacAddress.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // hostList
             // 
@@ -148,6 +151,7 @@
             this.btnSavedHostsWakeup.TabIndex = 1;
             this.btnSavedHostsWakeup.Text = "Wake up!";
             this.btnSavedHostsWakeup.UseVisualStyleBackColor = true;
+            this.btnSavedHostsWakeup.Click += new System.EventHandler(this.btnSavedHostsWakeup_Click);
             // 
             // btnDelete
             // 
@@ -157,6 +161,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 
