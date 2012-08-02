@@ -23,11 +23,11 @@ namespace WakeOnLAN
                                           SocketOptionName.Broadcast, 0);
         }
 
-        public static void WakeFunction(string MAC_ADDRESS)
+        public static void WakeFunction(string MAC_ADDRESS, string broadcast)
         {
             WOLClass client = new WOLClass();
-            client.Connect(new
-               IPAddress(0xffffffff),  //255.255.255.255  i.e broadcast
+            client.Connect(
+               IPAddress.Parse(broadcast),  //255.255.255.255  i.e broadcast
                0x2fff); // port=12287 let's use this one 
             client.SetClientToBrodcastMode();
             //set sending bites

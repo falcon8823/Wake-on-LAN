@@ -18,14 +18,16 @@ namespace WakeOnLAN
 
         private void btnNewHostWakeup_Click(object sender, EventArgs e)
         {
-            string macaddr = txtMacAddress.Text;
+            string macaddr = this.txtMacAddress.Text;
+            string bc = this.txtBroadcast.Text;
             try
             {
-                WOLClass.WakeFunction(macaddr);
+                WOLClass.WakeFunction(macaddr, bc);
+                MessageBox.Show("Complete.");
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("Invalid MAC Address.");
+                MessageBox.Show("Invalid MAC Address or Broadcast.");
                 this.txtMacAddress.Focus();
                 this.txtMacAddress.SelectAll();
             }
